@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        {% comment %} Here’s the syntax to use the join filter.  {% endcomment %}
+
+        {{ lst | join:" - " }}
+
+        <br>
+        {% comment %} Date Filter {% endcomment %}
+
+        {{ date | date:"D d M Y" }}
+        
+        <br>
+        {% comment %} Add Filter {% endcomment %}
+
+        {{ roll | add:"5" }}
+        
+        <br>
+        {% comment %} Capfirst Filter {% endcomment %}
+
+        {{ name | capfirst }}
+        <br>
+        {% comment %} Cut Filter {% endcomment %}
+
+        {{string | cut:" "}} 
+
+        <br>
+
+        {% comment %} Dictsort Filter {% endcomment %}
+
+        {{ profiles | dictsort:"age" }}
+
+        <br>
+
+        {% comment %} first filter {% endcomment %}
+
+        {{ profiles | first }}
+
+        <br> 
+
+        {% comment %} last filter  {% endcomment %}
+
+        {{ profiles | last }}
+
+        <br>
+
+        {% comment %} length filter {% endcomment %}
+
+        {{ profiles | length }}
+
+
+        <br>
+
+        {% comment %} linenumbers  filter {% endcomment %}
+
+        {{ lst | linenumbers }}
+        {{ profiles | linenumbers }}
+        {{ strlst | linenumbers }}
+        <br>
+
+        {% comment %} lower & upper filter {% endcomment %}
+
+        {{ string | lower }}
+        {{ string | upper }}
+        
+        
+        <br>
+        
+        {% comment %} title filter {% endcomment %}
+        
+        {{ string | title }}
+        
+        
+        <br>
+        
+        {% comment %} random filter {% endcomment %}
+        
+        
+        {{ strlst | random }}
+
+        <br>
+
+        {% comment %} slice filter {% endcomment %}
+
+        {{ strlst | slice:":2" }}
+
+        <br>
+
+        {% comment %} time filter {% endcomment %}
+
+        {{ date | time:"H:i" }}
+
+        <br>
+
+        {% comment %} timesince filter {% endcomment %}
+
+        {{ date | timesince:date }} 
+
+        <br>
+
+        {% comment %} Truncatechars  filter {% endcomment %}
+
+        {{ string | truncatechars:7 }}
+
+        <br>
+
+        {% comment %} wordcount filter {% endcomment %}
+
+        {{ string | wordcount }}
+
+        <br>
+
+        {% comment %} truncatewords filter {% endcomment %}
+
+        {{ string | truncatewords:3 }}
+
+        <br>
+
+        {% comment %} striptags filter {% endcomment %}
+
+        {{ HTMLfile | striptags }}
+
+        <br>
+
+        {% comment %} make_list filter {% endcomment %}
+
+        {{ string | make_list }}
+
+        
+
+
+
+    </main>
+	<script src="index.js"></script>
+  </body>
+</html>
